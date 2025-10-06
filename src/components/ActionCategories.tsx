@@ -184,7 +184,7 @@ const ActionCategories: React.FC = () => {
             {CATEGORIES.map((category, index) => (
               <button
                 key={category.key}
-                ref={el => tabRefs.current[index] = el}
+                ref={(el) => { tabRefs.current[index] = el; }}
                 role="tab"
                 aria-selected={activeCategory === index}
                 aria-controls={`panel-${category.key}`}

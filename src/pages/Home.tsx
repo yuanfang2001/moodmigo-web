@@ -1,4 +1,4 @@
-import React from 'react';
+import type { FC } from 'react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import HowItWorks from '../components/HowItWorks';
@@ -8,7 +8,7 @@ import Technology from '../components/Technology';
 import Experience from '../components/Experience';
 import Footer from '../components/Footer';
 
-const Home: React.FC = () => {
+const Home: FC = () => {
   return (
     <div className="min-h-screen bg-ui-bg">
       <Navbar />

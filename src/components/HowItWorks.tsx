@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 
 interface Step {
   key: string;
@@ -74,7 +74,7 @@ const STEPS: Step[] = [
   }
 ];
 
-const HowItWorks: React.FC = () => {
+export default function HowItWorks() {
   const [activeStep, setActiveStep] = useState(0);
   const [imageError, setImageError] = useState<Set<string>>(new Set());
   const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
@@ -142,7 +142,7 @@ const HowItWorks: React.FC = () => {
             {STEPS.map((step, index) => (
               <button
                 key={step.key}
-                ref={el => tabRefs.current[index] = el}
+                ref={(el) => { tabRefs.current[index] = el; }}
                 role="tab"
                 aria-selected={activeStep === index}
                 aria-controls={`panel-${step.key}`}
@@ -222,6 +222,4 @@ const HowItWorks: React.FC = () => {
       </div>
     </section>
   );
-};
-
-export default HowItWorks;
+}

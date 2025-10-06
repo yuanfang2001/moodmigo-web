@@ -12,7 +12,7 @@ const Experience: React.FC<ExperienceProps> = ({
   imageSrc
 }) => {
   const [videoError, setVideoError] = useState(false);
-  const [imageError, setImageError] = useState(false);
+  const [, setImageError] = useState(false);
 
   const handleVideoError = () => {
     setVideoError(true);
