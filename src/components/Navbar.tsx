@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,9 +19,9 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="/" className="text-ink-900 font-semibold text-xl">
+            <Link to="/" className="text-ink-900 font-semibold text-xl">
               MoodMigo
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}

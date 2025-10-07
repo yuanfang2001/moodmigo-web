@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 interface Step {
   key: string;
@@ -205,15 +206,21 @@ export default function HowItWorks() {
                 
                 {/* Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <button className="px-6 py-3 bg-brand-primary text-white rounded-full font-medium hover:bg-brand-primaryHover transition-colors">
+                  <Link
+                    to="/how-it-works"
+                    className="px-6 py-3 bg-brand-primary text-white rounded-full font-medium hover:bg-brand-primaryHover transition-colors focus-visible:ring-2 focus-visible:ring-brand-primary focus-visible:ring-offset-2 text-center"
+                  >
                     {currentStep.primary}
-                  </button>
-                  <button className="px-6 py-3 bg-ui-muted text-ink-900 border border-ui-border rounded-full font-medium hover:bg-ui-border transition-colors flex items-center justify-center">
+                  </Link>
+                  <Link
+                    to="/how-it-works"
+                    className="px-6 py-3 bg-ui-muted text-ink-900 border border-ui-border rounded-full font-medium hover:bg-ui-border transition-colors flex items-center justify-center focus-visible:ring-2 focus-visible:ring-brand-primary focus-visible:ring-offset-2"
+                  >
                     {currentStep.secondary}
                     <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>
