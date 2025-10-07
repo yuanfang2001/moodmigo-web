@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 interface Story {
   key: string;
@@ -226,12 +227,12 @@ const Stories: React.FC = () => {
                 
                 {/* Buttons - Both using secondary style */}
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <a
-                    href={currentStory.primary.href}
+                  <Link
+                    to="/stories"
                     className="px-6 py-3 bg-white text-ink-900 border border-ui-border rounded-full font-medium hover:bg-ui-muted transition-colors text-center"
                   >
                     {currentStory.primary.label}
-                  </a>
+                  </Link>
                   <a
                     href={currentStory.secondary.href}
                     className="px-6 py-3 bg-white text-ink-900 border border-ui-border rounded-full font-medium hover:bg-ui-muted transition-colors flex items-center justify-center"

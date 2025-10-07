@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 interface TechItem {
   key: string;
@@ -247,12 +248,12 @@ const Technology: React.FC = () => {
                 
                 {/* Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <a
-                    href={currentTech.primary.href}
+                  <Link
+                    to="/science"
                     className="px-6 py-3 bg-brand-primary text-white rounded-full font-medium hover:bg-brand-primaryHover transition-colors text-center"
                   >
                     {currentTech.primary.label}
-                  </a>
+                  </Link>
                   <a
                     href={currentTech.secondary.href}
                     className="px-6 py-3 bg-ui-muted text-ink-900 border border-ui-border rounded-full font-medium hover:bg-ui-border transition-colors flex items-center justify-center"
