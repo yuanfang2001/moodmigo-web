@@ -119,13 +119,21 @@ const Navbar: React.FC = () => {
           </div>
 
           {/* Desktop Buttons */}
-          <div className="hidden md:flex items-center space-x-4">
-            <button className="px-4 py-2 bg-ui-muted text-ink-900 border border-ui-border rounded-lg hover:bg-ui-border transition-colors">
-              Button
-            </button>
-            <button className="px-4 py-2 bg-brand-primary text-white rounded-lg hover:bg-brand-primaryHover transition-colors">
-              Button
-            </button>
+          <div className="hidden md:flex items-center gap-2">
+            <Link
+              to="/login"
+              aria-label="Login"
+              className="inline-flex items-center rounded-full border border-ui-border bg-white px-4 py-2 text-sm font-medium text-ink-900 hover:bg-ui-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary"
+            >
+              Login
+            </Link>
+            <Link
+              to="/signup"
+              aria-label="Sign Up"
+              className="inline-flex items-center rounded-full bg-brand-primary text-white px-4 py-2 text-sm font-medium hover:opacity-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary"
+            >
+              Sign Up
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -158,12 +166,18 @@ const Navbar: React.FC = () => {
                 About
               </a>
               <div className="pt-4 space-y-2">
-                <button className="w-full px-4 py-2 bg-ui-muted text-ink-900 border border-ui-border rounded-lg hover:bg-ui-border transition-colors">
-                  Button
-                </button>
-                <button className="w-full px-4 py-2 bg-brand-primary text-white rounded-lg hover:bg-brand-primaryHover transition-colors">
-                  Button
-                </button>
+                <Link
+                  to="/login"
+                  className="block w-full px-4 py-2 bg-white text-ink-900 border border-ui-border rounded-lg hover:bg-ui-muted transition-colors text-center"
+                >
+                  Login
+                </Link>
+                <Link
+                  to="/signup"
+                  className="block w-full px-4 py-2 bg-brand-primary text-white rounded-lg hover:opacity-95 transition-colors text-center"
+                >
+                  Sign Up
+                </Link>
               </div>
             </div>
           </div>
