@@ -184,7 +184,7 @@ const Stories: React.FC = () => {
             {STORIES.map((story, index) => (
               <button
                 key={story.key}
-                ref={(el) => { tabRefs.current[index] = el; }}
+                ref={el => { tabRefs.current[index] = el; }}
                 role="tab"
                 aria-selected={activeStory === index}
                 aria-controls={`panel-${story.key}`}
