@@ -46,7 +46,13 @@ export default function ActionsDetails() {
           </div>
 
           <div className="mt-8 sm:mt-10">
-            <ImagePlaceholder dark />
+            <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden">
+              <img 
+                src="/images/a6.png" 
+                alt="Small wins that rebuild your confidence" 
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -81,49 +87,20 @@ export default function ActionsDetails() {
           </div>
 
           <div className="mt-8 sm:mt-10">
-            <ImagePlaceholder dark />
+            <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden">
+              <img 
+                src="/images/a7.png" 
+                alt="Soothing experiences that nurture your spirit" 
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* 3) Connect — light muted background */}
-      <section className="bg-ui-muted text-ink-900 py-16 sm:py-24">
-        <div className="mx-auto max-w-[1100px] px-4">
-          <p className="text-sm font-medium uppercase tracking-wide text-ink-600 text-center">Connect</p>
-          <h2 className="mt-3 text-center text-4xl sm:text-5xl font-extrabold leading-tight">
-            Social interactions that
-            <br className="hidden sm:block" />
-            support your emotional
-            <br className="hidden sm:block" />
-            health
-          </h2>
-          <p className="mt-4 text-center text-ink-700 max-w-3xl mx-auto">
-            Build meaningful connections that provide support and understanding. Reach out
-            <br className="hidden sm:block" />
-            when you need it most.
-          </p>
-
-          <div className="mt-6 flex items-center justify-center gap-4">
-            <Link
-              to="/how-it-works#connect"
-              className="inline-flex items-center rounded-full bg-brand-primary px-6 py-3 text-base font-semibold text-white hover:bg-brand-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary"
-            >
-              Try now
-            </Link>
-            <Link
-              to="/how-it-works#connect"
-              className="inline-flex items-center gap-1 rounded-full border border-ui-border bg-white px-6 py-3 text-base font-semibold text-ink-900 hover:bg-ui-muted/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary"
-            >
-              Learn more
-              <Arrow />
-            </Link>
-          </div>
-
-          <div className="mt-10">
-            <ImagePlaceholder />
-          </div>
-        </div>
-      </section>
     </>
   );
 }
+
+
+

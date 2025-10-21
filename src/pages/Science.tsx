@@ -121,8 +121,12 @@ export default function Science() {
               <div className="text-xs font-medium uppercase tracking-wide text-ink-600">Sources</div>
               <h3 className="mt-1 text-2xl sm:text-3xl font-bold text-ink-900">Hugging Face datasets</h3>
               <p className="mt-3 text-ink-600">Extensive emotional intelligence training data</p>
-              <div className="mt-4 rounded-xl bg-ui-muted aspect-[16/9] grid place-items-center text-ink-600">
-                🖼️
+              <div className="mt-4 rounded-xl bg-ui-muted aspect-[16/9] overflow-hidden">
+                <img 
+                  src="/images/s3.png" 
+                  alt="Hugging Face datasets visualization" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="mt-auto">
                 <a href="#" className="mt-4 inline-flex items-center rounded-full border border-ui-border px-4 py-2 text-sm font-medium hover:bg-ui-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary">
@@ -196,8 +200,12 @@ export default function Science() {
               <div className="text-xs font-medium uppercase tracking-wide text-ink-600">Analytics</div>
               <h3 className="mt-1 text-2xl sm:text-3xl font-bold text-ink-900">Quantitative insights into emotional support</h3>
               <p className="mt-3 text-ink-600">Continuous evaluation and optimization of our AI models</p>
-              <div className="mt-4 rounded-xl bg-ui-muted aspect-[16/9] grid place-items-center text-ink-600">
-                📊
+              <div className="mt-4 rounded-xl bg-ui-muted aspect-[16/9] overflow-hidden">
+                <img 
+                  src="/images/s2.png" 
+                  alt="Quantitative insights analytics visualization" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="mt-auto">
                 <a href="#" className="mt-4 inline-flex items-center rounded-full border border-ui-border px-4 py-2 text-sm font-medium hover:bg-ui-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary">
@@ -209,71 +217,13 @@ export default function Science() {
         </div>
       </section>
 
-      {/* Process Section */}
-      <section id="process" className="py-16 sm:py-24">
-        <div className="max-w-[1200px] mx-auto px-4">
-          <div className="text-center mb-10">
-            <div className="text-xs font-medium uppercase tracking-wide text-ink-600">Process</div>
-            <h2 className="text-4xl sm:text-5xl font-extrabold text-ink-900">How we understand your emotions</h2>
-            <p className="mt-3 text-ink-600">Advanced algorithms that decode emotional nuances with precision</p>
-          </div>
-          <div className="grid gap-6 lg:grid-cols-2">
-            {/* Left content */}
-            <div className="rounded-2xl border border-ui-border bg-white p-6 sm:p-8 hover:shadow-sm transition">
-              <div className="text-xs font-medium uppercase tracking-wide text-ink-600">Analysis</div>
-              <h3 className="mt-1 text-2xl sm:text-3xl font-bold text-ink-900">Emotion interpretation framework</h3>
-              <p className="mt-3 text-ink-600">Deep learning models capture subtle emotional context and intensity</p>
-              <div className="mt-6 flex flex-wrap gap-3">
-                <a href="#" className="inline-flex items-center rounded-full border border-ui-border px-4 py-2 text-sm font-medium hover:bg-ui-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary">
-                  Learn
-                </a>
-                <a href="#" className="inline-flex items-center rounded-full border border-ui-border px-4 py-2 text-sm font-medium hover:bg-ui-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary">
-                  Explore <span className="ml-1"><Arrow /></span>
-                </a>
-              </div>
-            </div>
-            {/* Right image */}
-            <div className="rounded-2xl bg-ui-muted h-[420px] sm:h-[460px] lg:h-[520px] grid place-items-center text-ink-600">
-              🧠
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Privacy Section */}
       <section id="privacy" className="py-16 sm:py-24">
         <div className="max-w-[1200px] mx-auto px-4">
-          <div className="text-center mb-10">
+          <div className="text-left">
             <div className="text-xs font-medium uppercase tracking-wide text-ink-600">Privacy</div>
-            <h2 className="text-4xl sm:text-5xl font-extrabold text-ink-900">Your data is safe with MoodMigo</h2>
+            <h2 className="text-4xl sm:text-5xl font-extrabold text-ink-900 mt-2">Your data is safe with MoodMigo</h2>
             <p className="mt-3 text-ink-600">Committed to protecting your emotional insights with advanced security measures</p>
-          </div>
-          <div className="grid gap-6 lg:grid-cols-2">
-            {/* Left content */}
-            <div>
-              <h3 className="text-2xl sm:text-3xl font-bold text-ink-900 mb-4">Enterprise-grade security</h3>
-              <p className="text-ink-600 mb-6">Your emotional data is encrypted, anonymized, and protected with industry-leading security standards.</p>
-              
-              {/* Compliance badges */}
-              <div className="flex flex-wrap gap-3 mb-6">
-                <div className="rounded-lg bg-ui-muted px-3 py-2 text-sm font-medium text-ink-600">GDPR Compliant</div>
-                <div className="rounded-lg bg-ui-muted px-3 py-2 text-sm font-medium text-ink-600">SOC 2 Type II</div>
-                <div className="rounded-lg bg-ui-muted px-3 py-2 text-sm font-medium text-ink-600">ISO 27001</div>
-              </div>
-              
-              <div className="flex flex-wrap gap-3">
-                <a href="#" className="inline-flex items-center rounded-full bg-brand-primary px-4 py-2 text-sm font-medium text-white hover:opacity-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary">
-                  Protect
-                </a>
-                <a href="#" className="inline-flex items-center rounded-full border border-ui-border px-4 py-2 text-sm font-medium hover:bg-ui-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary">
-                  Learn <span className="ml-1"><Arrow /></span>
-                </a>
-              </div>
-            </div>
-            {/* Right image */}
-            <div className="rounded-2xl bg-ui-muted h-[420px] sm:h-[460px] lg:h-[520px] grid place-items-center text-ink-600">
-              🔒
-            </div>
           </div>
         </div>
       </section>

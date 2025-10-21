@@ -1,9 +1,15 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isAboutDropdownOpen, setIsAboutDropdownOpen] = useState(false);
+  const location = useLocation();
+
+  // Helper function to check if a path is active
+  const isActive = (path: string) => {
+    return location.pathname === path;
+  };
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -14,27 +20,55 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="bg-ui-bg border-b border-ui-border">
+    <nav className="bg-white border-b border-gray-200">
       <div className="max-w-[1200px] mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <Link to="/home" aria-label="Go to Home" className="text-ink-900 font-semibold text-xl">
+          {/* Logo + Brand Name */}
+          <div className="flex items-center space-x-3">
+            <img
+              src="/images/logo.png"
+              alt="MoodMigo logo"
+              width={40}
+              height={40}
+              className="w-10 h-10 mr-2 object-contain"
+            />
+            <Link to="/home" aria-label="Go to Home" className="text-ink-900 font-bold text-xl">
               MoodMigo
             </Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="/mood" className="text-ink-900 hover:text-ink-600 transition-colors">
+            <Link 
+              to="/mood" 
+              className={`transition-colors ${
+                isActive('/mood') 
+                  ? 'text-brand-primary font-medium' 
+                  : 'text-ink-900 hover:text-ink-600'
+              }`}
+            >
               Mood
-            </a>
-            <a href="/science" className="text-ink-900 hover:text-ink-600 transition-colors">
-              Science
-            </a>
-            <a href="/tech" className="text-ink-900 hover:text-ink-600 transition-colors">
-              Tech
-            </a>
+            </Link>
+            <Link 
+              to="/preference" 
+              className={`transition-colors ${
+                isActive('/preference') 
+                  ? 'text-brand-primary font-medium' 
+                  : 'text-ink-900 hover:text-ink-600'
+              }`}
+            >
+              Preference
+            </Link>
+            <Link 
+              to="/history" 
+              className={`transition-colors ${
+                isActive('/history') 
+                  ? 'text-brand-primary font-medium' 
+                  : 'text-ink-900 hover:text-ink-600'
+              }`}
+            >
+              History
+            </Link>
             
             {/* About Dropdown */}
             <div className="relative">
@@ -151,20 +185,52 @@ const Navbar: React.FC = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden border-t border-ui-border">
+          <div className="md:hidden border-t border-gray-200">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              <a href="/mood" className="block px-3 py-2 text-ink-900 hover:text-ink-600 transition-colors">
+              <Link 
+                to="/mood" 
+                className={`block px-3 py-2 transition-colors ${
+                  isActive('/mood') 
+                    ? 'text-brand-primary font-medium bg-ui-muted' 
+                    : 'text-ink-900 hover:text-ink-600'
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
                 Mood
-              </a>
-              <a href="/science" className="block px-3 py-2 text-ink-900 hover:text-ink-600 transition-colors">
-                Science
-              </a>
-              <a href="/tech" className="block px-3 py-2 text-ink-900 hover:text-ink-600 transition-colors">
-                Tech
-              </a>
-              <a href="/about" className="block px-3 py-2 text-ink-900 hover:text-ink-600 transition-colors">
+              </Link>
+              <Link 
+                to="/preference" 
+                className={`block px-3 py-2 transition-colors ${
+                  isActive('/preference') 
+                    ? 'text-brand-primary font-medium bg-ui-muted' 
+                    : 'text-ink-900 hover:text-ink-600'
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Preference
+              </Link>
+              <Link 
+                to="/history" 
+                className={`block px-3 py-2 transition-colors ${
+                  isActive('/history') 
+                    ? 'text-brand-primary font-medium bg-ui-muted' 
+                    : 'text-ink-900 hover:text-ink-600'
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                History
+              </Link>
+              <Link 
+                to="/about" 
+                className={`block px-3 py-2 transition-colors ${
+                  isActive('/about') 
+                    ? 'text-brand-primary font-medium bg-ui-muted' 
+                    : 'text-ink-900 hover:text-ink-600'
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
                 About
-              </a>
+              </Link>
               <div className="pt-4 space-y-2">
                 <Link
                   to="/login"

@@ -60,7 +60,13 @@ export default function ActionsDetailsMore() {
             </Link>
           </div>
           <div className="mt-8 sm:mt-10">
-            <ImagePlaceholder dark />
+            <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden">
+              <img 
+                src="/images/a8.png" 
+                alt="Physical actions to reset your energy" 
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -94,37 +100,20 @@ export default function ActionsDetailsMore() {
             </Link>
           </div>
           <div className="mt-8 sm:mt-10">
-            <ImagePlaceholder dark />
+            <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden">
+              <img 
+                src="/images/a9.png" 
+                alt="Grounding techniques for inner peace" 
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* 6) Final CTA — light */}
-      <section className="bg-white text-ink-900 py-16 sm:py-24">
-        <div className="mx-auto max-w-[1100px] px-4 text-center">
-          <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight">Turn your mood into action</h2>
-          <p className="mt-4 text-ink-700 max-w-3xl mx-auto">
-            Personalized micro-actions designed to help you navigate your emotional landscape
-          </p>
-          <div className="mt-6 flex items-center justify-center gap-4">
-            <Link
-              to="/how-it-works#actions"
-              className="inline-flex items-center rounded-full bg-brand-primary px-6 py-3 text-base font-semibold text-white hover:bg-brand-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary"
-            >
-              Start
-            </Link>
-            <Link
-              to="/how-it-works"
-              className="inline-flex items-center rounded-full border border-ui-border bg-white px-6 py-3 text-base font-semibold text-ink-900 hover:bg-ui-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary"
-            >
-              Learn
-            </Link>
-          </div>
-          <div className="mt-8 sm:mt-10">
-            <ImagePlaceholder />
-          </div>
-        </div>
-      </section>
     </>
   );
 }
+
+
+

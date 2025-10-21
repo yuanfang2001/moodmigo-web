@@ -25,7 +25,7 @@ const STORIES: Story[] = [
     title: "Felicia's journey",
     tagline: 'Tagline',
     description: 'A 24-year-old student finds comfort and motivation after a challenging exam.',
-    image: '/assets/images/story-student.webp',
+    image: '/images/h4.png',
     primary: {
       label: 'View story',
       href: '#'
@@ -41,7 +41,7 @@ const STORIES: Story[] = [
     title: "Alex's breakthrough",
     tagline: 'Tagline',
     description: 'Practical routines to navigate workplace pressure and uncertainty.',
-    image: '/assets/images/story-pro.webp',
+    image: '/images/h5.png',
     primary: {
       label: 'View story',
       href: '#'
@@ -57,7 +57,7 @@ const STORIES: Story[] = [
     title: 'Maya finds flow',
     tagline: 'Tagline',
     description: 'Gentle prompts that unlock momentum without perfectionism.',
-    image: '/assets/images/story-creative.webp',
+    image: '/images/h2.png',
     primary: {
       label: 'View story',
       href: '#'
@@ -73,7 +73,7 @@ const STORIES: Story[] = [
     title: 'Balance in the chaos',
     tagline: 'Tagline',
     description: 'Micro-actions that fit into family rhythms and real-life constraints.',
-    image: '/assets/images/story-parent.webp',
+    image: '/images/h5.png',
     primary: {
       label: 'View story',
       href: '#'
@@ -247,9 +247,9 @@ const Stories: React.FC = () => {
 
               {/* Image - Right Column */}
               <div className="w-full lg:w-1/2">
-                <div className="aspect-[4/3] rounded-xl border border-ui-border overflow-hidden">
+                <div className="w-full flex justify-center">
                   {imageError.has(currentStory.image) ? (
-                    <div className="w-full h-full bg-ui-muted border border-ui-border rounded-xl flex items-center justify-center">
+                    <div className="w-full max-h-[400px] bg-ui-muted border border-ui-border rounded-xl flex items-center justify-center">
                       <div className="text-center">
                         <div className="w-16 h-16 bg-ui-border rounded-lg mx-auto mb-2"></div>
                         <p className="text-ink-600 text-sm">Image placeholder</p>
@@ -259,7 +259,9 @@ const Stories: React.FC = () => {
                     <img
                       src={currentStory.image}
                       alt={currentStory.title}
-                      className="w-full h-full object-cover"
+                      className="w-full max-h-[400px] object-contain rounded-xl"
+                      loading="lazy"
+                      decoding="async"
                       onError={() => handleImageError(currentStory.image)}
                     />
                   )}

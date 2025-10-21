@@ -25,7 +25,7 @@ const TECH: TechItem[] = [
     title: 'AI model',
     tagline: 'Tagline',
     description: 'DeepSeek V3 fine-tuned with QLoRA for precise emotional understanding.',
-    image: '/assets/images/tech-model.webp',
+    image: '/images/h5.png',
     primary: {
       label: 'Explore',
       href: '#'
@@ -41,7 +41,7 @@ const TECH: TechItem[] = [
     title: 'Curated, privacy-first data',
     tagline: 'Tagline',
     description: 'Anonymized event signals and opt-in feedback loops to learn safely.',
-    image: '/assets/images/tech-data.webp',
+    image: '/images/h3.png',
     primary: {
       label: 'Explore',
       href: '#'
@@ -57,7 +57,7 @@ const TECH: TechItem[] = [
     title: 'Simple, stable APIs',
     tagline: 'Tagline',
     description: 'REST and streaming endpoints with typed responses and rate safety.',
-    image: '/assets/images/tech-apis.webp',
+    image: '/images/h4.png',
     primary: {
       label: 'Explore',
       href: '#'
@@ -73,7 +73,7 @@ const TECH: TechItem[] = [
     title: 'Human + automated evals',
     tagline: 'Tagline',
     description: 'Behavioral metrics, A/Bs, and rubric-guided reviews for quality.',
-    image: '/assets/images/tech-eval.webp',
+    image: '/images/h5.png',
     primary: {
       label: 'Explore',
       href: '#'
@@ -217,9 +217,9 @@ const Technology: React.FC = () => {
             <div className="flex flex-col lg:flex-row lg:gap-12">
               {/* Image - Left Column */}
               <div className="w-full lg:w-1/2 mb-6 lg:mb-0">
-                <div className="aspect-[4/3] rounded-xl border border-ui-border overflow-hidden">
+                <div className="w-full flex justify-center">
                   {imageError.has(currentTech.image) ? (
-                    <div className="w-full h-full bg-ui-muted border border-ui-border rounded-xl flex items-center justify-center">
+                    <div className="w-full max-h-[400px] bg-ui-muted border border-ui-border rounded-xl flex items-center justify-center">
                       <div className="text-center">
                         <div className="w-16 h-16 bg-ui-border rounded-lg mx-auto mb-2"></div>
                         <p className="text-ink-600 text-sm">Image placeholder</p>
@@ -229,7 +229,9 @@ const Technology: React.FC = () => {
                     <img
                       src={currentTech.image}
                       alt={currentTech.title}
-                      className="w-full h-full object-cover"
+                      className="w-full max-h-[400px] object-contain rounded-xl"
+                      loading="lazy"
+                      decoding="async"
                       onError={() => handleImageError(currentTech.image)}
                     />
                   )}

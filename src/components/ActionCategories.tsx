@@ -25,7 +25,7 @@ const CATEGORIES: Category[] = [
     title: 'Achieve small wins',
     tagline: 'Tagline',
     description: 'Rebuild confidence through targeted, manageable actions that help you feel accomplished and motivated to keep moving forward.',
-    image: '/assets/images/cat-achieve.webp',
+    image: '/images/h3.png',
     primary: {
       label: 'Explore',
       href: '#'
@@ -41,7 +41,7 @@ const CATEGORIES: Category[] = [
     title: 'Find gentle relief',
     tagline: 'Tagline',
     description: 'Discover soothing activities and self-care practices that provide comfort during difficult moments and help restore emotional balance.',
-    image: '/assets/images/cat-comfort.webp',
+    image: '/images/h4.png',
     primary: {
       label: 'Explore',
       href: '#'
@@ -57,7 +57,7 @@ const CATEGORIES: Category[] = [
     title: 'Reach out and relate',
     tagline: 'Tagline',
     description: 'Build meaningful connections and strengthen relationships through guided activities that help you communicate and bond with others.',
-    image: '/assets/images/cat-connect.webp',
+    image: '/images/h4.png',
     primary: {
       label: 'Explore',
       href: '#'
@@ -73,7 +73,7 @@ const CATEGORIES: Category[] = [
     title: 'Reset with movement',
     tagline: 'Tagline',
     description: 'Channel your energy through physical activities that help release tension, boost endorphins, and create a fresh perspective.',
-    image: '/assets/images/cat-move.webp',
+    image: '/images/h5.png',
     primary: {
       label: 'Explore',
       href: '#'
@@ -218,9 +218,9 @@ const ActionCategories: React.FC = () => {
             <div className="flex flex-col lg:flex-row lg:gap-12">
               {/* Image */}
               <div className="w-full lg:w-2/5 mb-6 lg:mb-0">
-                <div className="aspect-[4/3] rounded-xl border border-ui-border overflow-hidden">
+                <div className="w-full flex justify-center">
                   {imageError.has(currentCategory.image) ? (
-                    <div className="w-full h-full bg-ui-muted border border-ui-border rounded-xl flex items-center justify-center">
+                    <div className="w-full max-h-[400px] bg-ui-muted border border-ui-border rounded-xl flex items-center justify-center">
                       <div className="text-center">
                         <div className="w-16 h-16 bg-ui-border rounded-lg mx-auto mb-2"></div>
                         <p className="text-ink-600 text-sm">Image placeholder</p>
@@ -230,7 +230,9 @@ const ActionCategories: React.FC = () => {
                     <img
                       src={currentCategory.image}
                       alt={currentCategory.title}
-                      className="w-full h-full object-cover"
+                      className="w-full max-h-[400px] object-contain rounded-xl"
+                      loading="lazy"
+                      decoding="async"
                       onError={() => handleImageError(currentCategory.image)}
                     />
                   )}

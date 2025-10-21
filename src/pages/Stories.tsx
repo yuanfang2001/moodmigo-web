@@ -118,9 +118,9 @@ function StoriesFeedback() {
           Real experiences from people who transformed their emotional landscape with MoodMigo.
         </p>
 
-        {/* Pills */}
+        {/* Boxed Tabs */}
         <div role="tablist" aria-label="User feedback topics"
-             className="mt-8 grid grid-cols-2 sm:flex sm:flex-wrap gap-2 rounded-2xl border border-ui-border bg-ui-muted p-2">
+             className="mt-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-0 border border-ui-border rounded-lg overflow-hidden">
           {tabs.map((t, i) => {
             const selected = i === active;
             return (
@@ -131,42 +131,15 @@ function StoriesFeedback() {
                 onClick={() => setActive(i)}
                 onKeyDown={onKey}
                 className={[
-                  'rounded-xl px-4 py-3 text-sm font-semibold outline-none',
-                  selected ? 'bg-white shadow text-ink-900' : 'text-ink-700 hover:bg-white'
+                  'px-4 py-4 text-sm font-medium outline-none border-r border-ui-border last:border-r-0',
+                  'hover:bg-gray-50 transition-colors',
+                  selected ? 'bg-white text-ink-900 font-bold' : 'text-ink-700 bg-white'
                 ].join(' ')}
               >
                 {t}
               </button>
             );
           })}
-        </div>
-
-        {/* Panel */}
-        <div className="mt-8 rounded-2xl border border-ui-border bg-white p-6 sm:p-10">
-          <div className="grid grid-cols-12 gap-8 items-start">
-            <div className="col-span-12 md:col-span-6">
-              <ImgPlaceholder />
-            </div>
-            <div className="col-span-12 md:col-span-6">
-              <p className="text-sm font-medium text-ink-600">Tagline</p>
-              <h3 className="mt-2 text-3xl sm:text-4xl font-extrabold text-ink-900">
-                Medium length section heading goes here
-              </h3>
-              <p className="mt-4 text-ink-700">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros
-                elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo
-                diam libero vitae erat.
-              </p>
-              <div className="mt-6 flex flex-wrap gap-3">
-                <button className="inline-flex items-center rounded-full border border-ui-border bg-white px-5 py-2.5 text-sm font-semibold text-ink-900 hover:bg-ui-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary">
-                  Button
-                </button>
-                <button className="inline-flex items-center gap-1 rounded-full border border-ui-border bg-white px-5 py-2.5 text-sm font-semibold text-ink-900 hover:bg-ui-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary">
-                  Button <Arrow />
-                </button>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -179,23 +152,16 @@ function StoriesCTA() {
     <section className="py-16 sm:py-24">
       <div className="mx-auto max-w-[1100px] px-4 text-center">
         <h2 className="text-4xl sm:text-5xl font-extrabold text-ink-900">
-          Ready to turn your mood
-          <br className="hidden sm:block" /> into action?
+          Ready to transform your mood
         </h2>
         <p className="mt-4 text-ink-700 max-w-3xl mx-auto">
-          Experience personalized emotional support that understands your unique journey
+          Instant emotional support without complicated downloads or signups
         </p>
-        <div className="mt-6 flex items-center justify-center gap-4">
-          <button className="inline-flex items-center rounded-full bg-brand-primary px-6 py-3 text-base font-semibold text-white hover:bg-brand-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary">
-            Start
+        <div className="mt-8 flex items-center justify-center">
+          <button className="inline-flex items-center gap-2 rounded-full bg-[#4DA6FF] px-8 py-4 text-lg font-bold text-white hover:bg-[#4DA6FF]/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4DA6FF] transition-colors">
+            REGISTER NOW
+            <Arrow />
           </button>
-          <button className="inline-flex items-center rounded-full border border-ui-border bg-white px-6 py-3 text-base font-semibold text-ink-900 hover:bg-ui-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary">
-            Learn more
-          </button>
-        </div>
-
-        <div className="mt-8">
-          <ImgPlaceholder />
         </div>
       </div>
     </section>
@@ -319,14 +285,47 @@ export default function Stories() {
                   </Link>
                 </div>
               </div>
-              {/* image placeholder */}
+              {/* image */}
               <div className="col-span-12 md:col-span-6">
-                <Placeholder />
+                <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden">
+                  <img 
+                    src="/images/s1.png" 
+                    alt="Felicia - Student support system"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Felicia's Story Content - Only show for Students */}
+      {active === 'students' && (
+        <section className="py-16 sm:py-24 bg-gray-50">
+          <div className="mx-auto max-w-[1100px] px-4">
+            <div className="rounded-2xl bg-white p-8 sm:p-12 shadow-sm border border-ui-border">
+              <div className="max-w-4xl mx-auto">
+                <p className="text-ink-700 leading-relaxed mb-6">
+                  As a graduate student balancing deadlines and exams, Felicia often felt overwhelmed by academic stress. One night before a major presentation, she opened MoodMigo and entered her mood: "Anxious and tense."
+                </p>
+                
+                <p className="text-ink-700 leading-relaxed mb-6">
+                  MoodMigo instantly analyzed her emotional tone and suggested three micro-actions — a short breathing exercise, a two-minute gratitude reflection, and a calming instrumental playlist.
+                </p>
+                
+                <p className="text-ink-700 leading-relaxed mb-6">
+                  After following the steps, Felicia noticed her heart rate slow and her focus return. The next day, she performed with confidence.
+                </p>
+                
+                <blockquote className="text-ink-700 italic text-lg leading-relaxed border-l-4 border-brand-primary pl-6 mt-8">
+                  "MoodMigo didn't just calm me down — it helped me understand what I needed in that moment."
+                </blockquote>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Feedback Section */}
       <StoriesFeedback />
