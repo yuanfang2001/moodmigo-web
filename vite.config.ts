@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/',   // 关键：和仓库名一致；若以后用根域仓库则改成 '/'
+  base: '/moodmigo-web/',
 })
