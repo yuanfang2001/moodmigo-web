@@ -1,5 +1,8 @@
 import React, { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+import h3Image from '/images/h3.png';
+import h4Image from '/images/h4.png';
+import h5Image from '/images/h5.png';
 
 interface Category {
   key: string;
@@ -25,7 +28,7 @@ const CATEGORIES: Category[] = [
     title: 'Achieve small wins',
     tagline: 'Tagline',
     description: 'Rebuild confidence through targeted, manageable actions that help you feel accomplished and motivated to keep moving forward.',
-    image: '/images/h3.png',
+    image: h3Image,
     primary: {
       label: 'Explore',
       href: '#'
@@ -41,7 +44,7 @@ const CATEGORIES: Category[] = [
     title: 'Find gentle relief',
     tagline: 'Tagline',
     description: 'Discover soothing activities and self-care practices that provide comfort during difficult moments and help restore emotional balance.',
-    image: '/images/h4.png',
+    image: h4Image,
     primary: {
       label: 'Explore',
       href: '#'
@@ -57,7 +60,7 @@ const CATEGORIES: Category[] = [
     title: 'Reach out and relate',
     tagline: 'Tagline',
     description: 'Build meaningful connections and strengthen relationships through guided activities that help you communicate and bond with others.',
-    image: '/images/h4.png',
+    image: h4Image,
     primary: {
       label: 'Explore',
       href: '#'
@@ -73,7 +76,7 @@ const CATEGORIES: Category[] = [
     title: 'Reset with movement',
     tagline: 'Tagline',
     description: 'Channel your energy through physical activities that help release tension, boost endorphins, and create a fresh perspective.',
-    image: '/images/h5.png',
+    image: h5Image,
     primary: {
       label: 'Explore',
       href: '#'

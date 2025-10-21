@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import logoImage from '/images/logo.png';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,7 +27,7 @@ const Navbar: React.FC = () => {
           {/* Logo + Brand Name */}
           <div className="flex items-center space-x-3">
             <img
-              src="/images/logo.png"
+              src={logoImage}
               alt="MoodMigo logo"
               width={40}
               height={40}

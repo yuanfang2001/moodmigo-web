@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+import a8Image from '/images/a8.png';
+import a9Image from '/images/a9.png';
 
 function Arrow() {
   return (
@@ -62,7 +64,7 @@ export default function ActionsDetailsMore() {
           <div className="mt-8 sm:mt-10">
             <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden">
               <img 
-                src="/images/a8.png" 
+                src={a8Image} 
                 alt="Physical actions to reset your energy" 
                 className="w-full h-full object-cover"
               />
@@ -102,7 +104,7 @@ export default function ActionsDetailsMore() {
           <div className="mt-8 sm:mt-10">
             <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden">
               <img 
-                src="/images/a9.png" 
+                src={a9Image} 
                 alt="Grounding techniques for inner peace" 
                 className="w-full h-full object-cover"
               />

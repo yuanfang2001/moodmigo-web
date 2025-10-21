@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import s3Image from '/images/s3.png';
+import s2Image from '/images/s2.png';
 
 const Arrow = () => (
   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -123,7 +125,7 @@ export default function Science() {
               <p className="mt-3 text-ink-600">Extensive emotional intelligence training data</p>
               <div className="mt-4 rounded-xl bg-ui-muted aspect-[16/9] overflow-hidden">
                 <img 
-                  src="/images/s3.png" 
+                  src={s3Image} 
                   alt="Hugging Face datasets visualization" 
                   className="w-full h-full object-cover"
                 />
@@ -202,7 +204,7 @@ export default function Science() {
               <p className="mt-3 text-ink-600">Continuous evaluation and optimization of our AI models</p>
               <div className="mt-4 rounded-xl bg-ui-muted aspect-[16/9] overflow-hidden">
                 <img 
-                  src="/images/s2.png" 
+                  src={s2Image} 
                   alt="Quantitative insights analytics visualization" 
                   className="w-full h-full object-cover"
                 />

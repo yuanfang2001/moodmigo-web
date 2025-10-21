@@ -7,6 +7,7 @@ import ActionCategories from '../components/ActionCategories';
 import Stories from '../components/Stories';
 import Technology from '../components/Technology';
 import Footer from '../components/Footer';
+import h2Image from '/images/h2.png';
 
 const Home: FC = () => {
   const [activeTab, setActiveTab] = useState('setup');
@@ -62,7 +63,7 @@ const Home: FC = () => {
                 {/* Left side - Image */}
                 <div className="w-full lg:w-1/2">
                   <img
-                    src="/images/h2.png"
+                    src={h2Image}
                     alt="Preference setup"
                     className="w-full aspect-square object-cover rounded-xl"
                     loading="lazy"

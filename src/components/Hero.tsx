@@ -1,11 +1,12 @@
 import React from 'react';
+import h1Image from '/images/h1.png';
 
 const Hero: React.FC = () => {
   return (
     <section 
       className="relative flex flex-col items-center justify-center text-center text-white py-32 sm:py-48 rounded-none lg:rounded-3xl mx-4 lg:mx-8 overflow-hidden animate-fade-in"
       style={{
-        backgroundImage: 'url(./images/h1.png)',
+        backgroundImage: `url(${h1Image})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',

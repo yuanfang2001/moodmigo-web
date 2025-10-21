@@ -1,5 +1,8 @@
 import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import h5Image from '/images/h5.png';
+import h3Image from '/images/h3.png';
+import h4Image from '/images/h4.png';
 
 interface TechItem {
   key: string;
@@ -25,7 +28,7 @@ const TECH: TechItem[] = [
     title: 'AI model',
     tagline: 'Tagline',
     description: 'DeepSeek V3 fine-tuned with QLoRA for precise emotional understanding.',
-    image: '/images/h5.png',
+    image: h5Image,
     primary: {
       label: 'Explore',
       href: '#'
@@ -41,7 +44,7 @@ const TECH: TechItem[] = [
     title: 'Curated, privacy-first data',
     tagline: 'Tagline',
     description: 'Anonymized event signals and opt-in feedback loops to learn safely.',
-    image: '/images/h3.png',
+    image: h3Image,
     primary: {
       label: 'Explore',
       href: '#'
@@ -57,7 +60,7 @@ const TECH: TechItem[] = [
     title: 'Simple, stable APIs',
     tagline: 'Tagline',
     description: 'REST and streaming endpoints with typed responses and rate safety.',
-    image: '/images/h4.png',
+    image: h4Image,
     primary: {
       label: 'Explore',
       href: '#'
@@ -73,7 +76,7 @@ const TECH: TechItem[] = [
     title: 'Human + automated evals',
     tagline: 'Tagline',
     description: 'Behavioral metrics, A/Bs, and rubric-guided reviews for quality.',
-    image: '/images/h5.png',
+    image: h5Image,
     primary: {
       label: 'Explore',
       href: '#'

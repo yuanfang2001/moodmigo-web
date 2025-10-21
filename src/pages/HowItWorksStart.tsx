@@ -1,6 +1,7 @@
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { useState } from 'react';
+import p1Image from '/images/p1.png';
 
 export default function HowItWorksStart() {
   const [imageError, setImageError] = useState(false);
@@ -22,7 +23,7 @@ export default function HowItWorksStart() {
             </div>
           ) : (
             <img
-               src="/images/p1.png"
+               src={p1Image}
               alt="How MoodMigo works"
               className="absolute inset-0 w-full h-full object-cover"
               onError={handleImageError}
@@ -47,7 +48,7 @@ export default function HowItWorksStart() {
             </div>
           ) : (
             <img
-               src="/images/p1.png"
+               src={p1Image}
               alt="MoodMigo User Guide"
               className="w-full h-auto rounded-2xl shadow-lg"
               onError={handleImageError}

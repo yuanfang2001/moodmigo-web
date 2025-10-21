@@ -1,10 +1,16 @@
+import a1Image from '/images/a1.png';
+import a2Image from '/images/a2.png';
+import a3Image from '/images/a3.png';
+import a4Image from '/images/a4.png';
+import a5Image from '/images/a5.png';
+
 const CARDS = [
   {
     key: "achieve",
     tag: "Achieve",
     title: "Small wins rebuild confidence",
     desc: "Targeted actions help you regain momentum and self-belief.",
-    img: "/images/a1.png",
+    img: a1Image,
     size: "hero", // spans 2 rows on desktop
   },
   {
@@ -12,7 +18,7 @@ const CARDS = [
     tag: "Comfort",
     title: "Comfort",
     desc: "Soothing experiences that nurture your inner calm",
-    img: "/images/a2.png",
+    img: a2Image,
     size: "sm",
   },
   {
@@ -20,7 +26,7 @@ const CARDS = [
     tag: "Move",
     title: "Move",
     desc: "Physical actions to reset your energy and perspective",
-    img: "/images/a3.png",
+    img: a3Image,
     size: "sm",
   },
   {
@@ -28,7 +34,7 @@ const CARDS = [
     tag: "Connect",
     title: "Connect",
     desc: "Build meaningful social interactions that support your emotional health",
-    img: "/images/a4.png",
+    img: a4Image,
     size: "sm",
   },
   {
@@ -36,7 +42,7 @@ const CARDS = [
     tag: "Calm",
     title: "Calm",
     desc: "Grounding techniques to help you find inner peace",
-    img: "/images/a5.png",
+    img: a5Image,
     size: "sm",
   },
 ];

@@ -1,4 +1,5 @@
 import React from 'react';
+import logoImage from '/images/logo.png';
 
 const Footer: React.FC = () => {
   return (
@@ -11,7 +12,7 @@ const Footer: React.FC = () => {
             {/* Logo */}
             <div className="flex items-center">
               <img 
-                src="/assets/logo/logo.svg" 
+                src={logoImage} 
                 alt="MoodMigo Logo" 
                 className="h-7 w-auto"
                 onError={(e) => {

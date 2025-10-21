@@ -1,5 +1,8 @@
 import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import h4Image from '/images/h4.png';
+import h5Image from '/images/h5.png';
+import h2Image from '/images/h2.png';
 
 interface Story {
   key: string;
@@ -25,7 +28,7 @@ const STORIES: Story[] = [
     title: "Felicia's journey",
     tagline: 'Tagline',
     description: 'A 24-year-old student finds comfort and motivation after a challenging exam.',
-    image: '/images/h4.png',
+    image: h4Image,
     primary: {
       label: 'View story',
       href: '#'
@@ -41,7 +44,7 @@ const STORIES: Story[] = [
     title: "Alex's breakthrough",
     tagline: 'Tagline',
     description: 'Practical routines to navigate workplace pressure and uncertainty.',
-    image: '/images/h5.png',
+    image: h5Image,
     primary: {
       label: 'View story',
       href: '#'
@@ -57,7 +60,7 @@ const STORIES: Story[] = [
     title: 'Maya finds flow',
     tagline: 'Tagline',
     description: 'Gentle prompts that unlock momentum without perfectionism.',
-    image: '/images/h2.png',
+    image: h2Image,
     primary: {
       label: 'View story',
       href: '#'
@@ -73,7 +76,7 @@ const STORIES: Story[] = [
     title: 'Balance in the chaos',
     tagline: 'Tagline',
     description: 'Micro-actions that fit into family rhythms and real-life constraints.',
-    image: '/images/h5.png',
+    image: h5Image,
     primary: {
       label: 'View story',
       href: '#'

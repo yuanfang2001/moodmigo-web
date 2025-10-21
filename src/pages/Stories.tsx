@@ -2,6 +2,7 @@ import { useEffect, useId, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import s1Image from '/images/s1.png';
 
 function Arrow() {
   return (
@@ -289,7 +290,7 @@ export default function Stories() {
               <div className="col-span-12 md:col-span-6">
                 <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden">
                   <img 
-                    src="/images/s1.png" 
+                    src={s1Image} 
                     alt="Felicia - Student support system"
                     className="w-full h-full object-cover"
                   />

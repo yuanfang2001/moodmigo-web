@@ -9,7 +9,7 @@ interface ExperienceProps {
 const Experience: React.FC<ExperienceProps> = ({ 
   videoSrc = '/assets/demo/moodmigo-demo.mp4',
   posterSrc = '/assets/demo/moodmigo-poster.webp',
-  imageSrc = '/moodmigo-web/images/h2.png'
+  imageSrc = '/images/h2.png'
 }) => {
   const [videoError, setVideoError] = useState(false);
   const [, setImageError] = useState(false);

@@ -1,5 +1,12 @@
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import p2Image from '/images/p2.png';
+import p3Image from '/images/p3.png';
+import p4Image from '/images/p4.png';
+import p5Image from '/images/p5.png';
+import p6Image from '/images/p6.png';
+import p7Image from '/images/p7.png';
+import p1Image from '/images/p1.png';
 
 export default function HowItWorksPage() {
   return (
@@ -35,7 +42,7 @@ export default function HowItWorksPage() {
                   {/* Top small image */}
                   <div className="mb-4">
                     <img
-                      src="/images/p2.png"
+                      src={p2Image}
                       alt="Preference setup small"
                       className="w-16 h-16 mx-auto mb-4"
                     />
@@ -44,7 +51,7 @@ export default function HowItWorksPage() {
                   {/* Large image */}
                   <div className="mb-6">
                     <img
-                      src="/images/p3.png"
+                      src={p3Image}
                       alt="Preference setup"
                       className="w-full h-48 object-cover rounded-lg mx-auto"
                     />
@@ -67,7 +74,7 @@ export default function HowItWorksPage() {
               <div>
                 <div className="border rounded-2xl shadow-sm bg-white p-6 flex flex-col justify-between hover:shadow-md transition h-full">
                   <img
-                    src="/images/p4.png"
+                    src={p4Image}
                     alt="Mood capture"
                     className="w-20 h-20 mx-auto mb-4"
                   />
@@ -87,7 +94,7 @@ export default function HowItWorksPage() {
               <div>
                 <div className="border rounded-2xl shadow-sm bg-white p-6 flex flex-col justify-between hover:shadow-md transition h-full">
                   <img
-                    src="/images/p6.png"
+                    src={p6Image}
                     alt="Emotion insights"
                     className="w-20 h-20 mx-auto mb-4"
                   />
@@ -107,7 +114,7 @@ export default function HowItWorksPage() {
               <div>
                 <div className="border rounded-2xl shadow-sm bg-white p-6 flex flex-col justify-between hover:shadow-md transition h-full">
                   <img
-                    src="/images/p5.png"
+                    src={p5Image}
                     alt="Action recommendations"
                     className="w-20 h-20 mx-auto mb-4"
                   />
@@ -127,7 +134,7 @@ export default function HowItWorksPage() {
               <div>
                 <div className="border rounded-2xl shadow-sm bg-white p-6 flex flex-col justify-between hover:shadow-md transition h-full">
                   <img
-                    src="/images/p7.png"
+                    src={p7Image}
                     alt="Feedback loop"
                     className="w-20 h-20 mx-auto mb-4"
                   />
@@ -160,7 +167,7 @@ export default function HowItWorksPage() {
           {/* Demo image */}
           <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden border border-gray-300 shadow-md">
             <img
-              src="/images/p1.png"
+              src={p1Image}
               alt="MoodMigo User Guide"
               className="w-full h-auto object-contain"
               loading="lazy"
